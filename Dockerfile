@@ -44,6 +44,9 @@ RUN apt-get install -y --allow-downgrades --allow-remove-essential --allow-chang
 RUN apt-get install -y --allow-downgrades --allow-remove-essential --allow-change-held-packages --no-install-recommends \
         devscripts
 
+RUN apt-get install -y --allow-downgrades --allow-remove-essential --allow-change-held-packages --no-install-recommends \
+        vim
+
 ARG VERSION
 
 WORKDIR /opt/git
