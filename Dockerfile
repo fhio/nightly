@@ -55,7 +55,7 @@ WORKDIR /opt/build
 
 RUN tar xvzf /opt/build/*
 
-RUN PROJECT_VERSION=`cat $SOURCES_ROOT_PATH/buildspecs/projectversion.pri | grep "PACKAGE_VERSION" | cut -d = -s -f2 | tr -d ' '` && \
+RUN PROJECT_VERSION=`cat /opt/git/freehealth/buildspecs/projectversion.pri | grep "PACKAGE_VERSION" | cut -d = -s -f2 | tr -d ' '` && \
     git clone https://github.com/FreeHealth/debian.git /opt/build/freehealth-$PROJECT_VERSION/debian
 
 #RUN qmake freehealth.pro -Wall -r "CONFIG+=debug debug_without_install"
