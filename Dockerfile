@@ -58,9 +58,10 @@ WORKDIR /opt/build
 RUN tar xvzf /opt/build/*
 
 RUN PROJECT_VERSION=`cat /opt/git/freehealth/buildspecs/projectversion.pri | grep "PACKAGE_VERSION" | cut -d = -s -f2 | tr -d ' '` && \
-    git clone https://github.com/FreeHealth/debian.git /opt/build/freehealth-$PROJECT_VERSION/debian
-
-RUN COMMIT=`git -C /opt/git/freehealth/ rev-parse HEAD` && cd /opt/build/freehealth-$VERSION/debian && dch -i -r "{$COMMIT}"
+    git clone https://github.com/FreeHealth/debian.git /opt/build/freehealth-$PROJECT_VERSION/debian && \
+    COMMIT=`git -C /opt/git/freehealth/ rev-parse HEAD` && \
+    cd /opt/build/freehealth-$PROJECT_VERSION/debian && \
+    dch -i -r '{$COMMIT}'
 
 #RUN qmake freehealth.pro -Wall -r "CONFIG+=debug debug_without_install"
 
