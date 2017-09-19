@@ -36,6 +36,9 @@ RUN apt-get install -y --allow-downgrades --allow-remove-essential --allow-chang
 RUN apt-get install -y --allow-downgrades --allow-remove-essential --allow-change-held-packages --no-install-recommends \
         git 
 
+RUN apt-get install -y --allow-downgrades --allow-remove-essential --allow-change-held-packages --no-install-recommends \
+        ca-certificates
+
 ARG version
 
 WORKDIR /opt/git
