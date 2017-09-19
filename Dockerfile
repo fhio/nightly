@@ -51,6 +51,16 @@ RUN apt-get install -y --allow-downgrades --allow-remove-essential --allow-chang
         fakeroot \
         libdistro-info-perl
 
+RUN apt-get install -y --allow-downgrades --allow-remove-essential --allow-change-held-packages --no-install-recommends \
+        libopencv-core-dev \
+        libopencv-highgui-dev \
+        libopencv-objdetect-dev \
+        libdistro-info-perl \
+        libquazip5-dev \
+        libquazip5-headers \
+        libquazip5-1 \
+        libqt5xmlpatterns5-dev
+
 ARG VERSION
 
 WORKDIR /opt/git
