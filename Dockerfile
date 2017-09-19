@@ -61,6 +61,10 @@ RUN apt-get install -y --allow-downgrades --allow-remove-essential --allow-chang
         libquazip5-1 \
         libqt5xmlpatterns5-dev
 
+
+RUN apt-get install -y --allow-downgrades --allow-remove-essential --allow-change-held-packages --no-install-recommends \
+        debhelper
+
 ARG VERSION
 
 WORKDIR /opt/git
