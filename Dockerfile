@@ -1,7 +1,9 @@
 FROM debian:stretch-slim                                            
 MAINTAINER jerome <jerome@jerome.cc>
 
-ENV DEBIAN_FRONTEND noninteractive
+ENV DEBIAN_FRONTEND=noninteractive \
+    DEBEMAIL="Jerome Pinguet <jerome@jerome.cc>"
+
 
 RUN apt-get update                                                              
 RUN apt-get install -y --allow-downgrades --allow-remove-essential --allow-change-held-packages --no-install-recommends \
