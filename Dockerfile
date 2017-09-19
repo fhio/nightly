@@ -47,6 +47,10 @@ RUN apt-get install -y --allow-downgrades --allow-remove-essential --allow-chang
 RUN apt-get install -y --allow-downgrades --allow-remove-essential --allow-change-held-packages --no-install-recommends \
         vim
 
+RUN apt-get install -y --allow-downgrades --allow-remove-essential --allow-change-held-packages --no-install-recommends \
+        fakeroot \
+        libdistro-info-perl
+
 ARG VERSION
 
 WORKDIR /opt/git
