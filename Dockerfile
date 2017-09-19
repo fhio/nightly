@@ -67,7 +67,7 @@ RUN PROJECT_VERSION=`cat /opt/git/freehealth/buildspecs/projectversion.pri | gre
     git clone https://github.com/FreeHealth/debian.git /opt/build/freehealth-$PROJECT_VERSION/debian && \
     COMMIT=`git -C /opt/git/freehealth/ rev-parse HEAD` && \
     cd /opt/build/freehealth-$PROJECT_VERSION/debian && \
-    dch -v ${PROJECT_VERSION} '${COMMIT}' && \
+    dch -v ${PROJECT_VERSION}-1 '${COMMIT}' && \
     dch -r --distribution unstable ignored
 
 #RUN qmake freehealth.pro -Wall -r "CONFIG+=debug debug_without_install"
