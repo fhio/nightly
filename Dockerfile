@@ -47,7 +47,7 @@ RUN git clone https://github.com/FreeHealth/freehealth.git
 
 RUN mkdir /opt/build
 
-RUN /git/freehealth/scripts/source.sh -p /opt/build
+RUN /opt/git/freehealth/scripts/source.sh -p /opt/build
 
 WORKDIR /opt/build
 
